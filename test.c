@@ -24,6 +24,7 @@ int main(void)
     test_check(12345674l, true)
     test_check(33445563l, true)
     test_check(75316429l, true)
+
     test_check(12345673l, false)
     test_check(33445562l, false)
     test_check(75316428l, false)
