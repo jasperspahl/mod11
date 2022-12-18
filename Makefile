@@ -4,8 +4,8 @@ CFLAGS= -Wall -Wextra -g
 	@ echo "Compiling $<"
 	@ $(CC) $(CFLAGS) -c $<
 
-.PHONE: all
-all: run-test app clean
+.PHONY: all
+all: run-test app
 
 test: test.o mod11.o
 	@ echo "Linking $@"
@@ -23,7 +23,7 @@ run-test: test
 .PHONY: run
 run: app
 	@ echo "Running app"
-	@ ./app
+	@ ./app c
 
 .PHONY: clean
 clean:
